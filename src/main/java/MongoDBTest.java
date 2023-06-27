@@ -30,6 +30,11 @@ public class MongoDBTest {
     String yourMessage = "(//div[@id='user-message']/p)[1]";
 
     // This function will initialize MongoClient and will establish DB connection with MongoDB. 
+    // Provide below connection parameters
+    // {MongoDBHost}: IP Address of machine where MongoDB is hosted.
+    // Sometimes we face issues binding to localhost on Windows. To avoid this, on the MongoDB host, open cmd and run ipconfig. Use the 'ipv4 address' as IP for connecting to MongoDB via script. 
+    // {MongoDBName}: Database 'Demo' created in earlier steps
+    // {MongoDBPort}: 27017
     @BeforeClass
     public void connectToMongoDB(){
         // Connect to MongoDB by giving {MongoDBHost}
