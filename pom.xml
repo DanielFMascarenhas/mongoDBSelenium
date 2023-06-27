@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mongodb</groupId>
+	<artifactId>mongodb</artifactId>
+	<version>21.3.00</version>
+	<packaging>jar</packaging>
+	<name>mongodb</name>
+	<url>http://maven.apache.org</url>
+	<repositories>
+		<repository>
+			<id>maven</id>
+			<name>maven</name>
+			<url>https://repo1.maven.org/maven2</url>
+		</repository>
+	</repositories>
+
+
+	<dependencies>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/klov-reporter -->
+        <dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>klov-reporter</artifactId>
+	    <version>5.0.2</version>
+        </dependency>
+        <dependency>
+	    <groupId>com.aventstack</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>5.0.8</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.testng</groupId>
+	    <artifactId>testng</artifactId>
+	    <version>7.7.1</version>
+	</dependency>
+	<!--WebDriver libs -->
+	<dependency>
+	     <groupId>org.seleniumhq.selenium</groupId>
+	     <artifactId>selenium-java</artifactId>
+	     <version>4.8.3</version>
+	</dependency>
+	<dependency>
+	      <groupId>org.seleniumhq.selenium</groupId>
+	      <artifactId>selenium-api</artifactId>
+	      <version>4.8.3</version>
+	</dependency>
+	<dependency>
+	       <groupId>org.seleniumhq.selenium</groupId>
+	       <artifactId>selenium-support</artifactId>
+	       <version>4.8.3</version>
+	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+	<dependency>
+		<groupId>org.mongodb</groupId>
+		<artifactId>mongo-java-driver</artifactId>
+		<version>3.12.13</version>
+	</dependency>
+
+	</dependencies>
+
+	<properties>
+		<maven.compiler.release>11</maven.compiler.release>
+	</properties>
+
+	<build>
+	  <plugins>
+            <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.8.0</version>
+		<configuration>
+			<source>${javac.version}</source>
+			<target>${javac.version}</target>
+		</configuration>
+	     </plugin>
+	   </plugins>
+
+	<resources>
+	    <resource>
+		<directory>${basedir}/src/test/resources</directory>
+	    </resource>
+	</resources>
+	</build>
+
+</project>
