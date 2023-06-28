@@ -44,8 +44,6 @@ public class MongoDBTest {
         database = mongoClient.getDatabase("{MongoDBName}");
         // Get Database handle by giving collection name created in MongoDB. 
         test_execution_info = database.getCollection("test_execution_details");
-        // Initialise an instance of document
-        doc = new Document();
     }
 
     // This function will initialize Selenium webdrivers in headless manner. 
